@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: flask-cicd
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: flask-cicd
@@ -14,10 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-cicd
-        image: rahatnaqvi/flask-cicd:latest
+        image: flask-cicd:latest
+        imagePullPolicy: Never
         ports:
-        - containerPort: 5000
-        resources:
-          limits:
-            cpu: "1"
-            memory: "1Gi"
+        - containerPort: 8080
