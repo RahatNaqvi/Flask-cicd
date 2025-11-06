@@ -7,4 +7,5 @@ def home():
     return "Hello from Flask CI/CD Pipeline created by Rahat Naqvi (Jenkins → Docker → Kubernetes)"
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8080)
+
